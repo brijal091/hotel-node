@@ -5,7 +5,7 @@ require("./db")
 const app = express()
 const port = 5000
 
-app.use(cors())
+app.use(cors());
 
 // Middle ware 
 app.use(express.json())
