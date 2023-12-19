@@ -15,6 +15,7 @@ app.use('/api/auth', require('./routes/auth'))
 app.use('/api/room', require('./routes/rooms'))
 app.use('/api/bookings', require('./routes/booking'))
 app.use('/api/hotels', require('./routes/hotels'))
+app.use('/api/shared', require('./routes/shared'))
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
