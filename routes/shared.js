@@ -36,7 +36,7 @@ const checkAllRoomsAvailability = async (checkInTime, checkOutTime) => {
 router.get("/showrooms", async (req, res) => {
  let {checkInDate, checkOutDate} = req.body;
  console.log(checkInDate, checkOutDate);
- const allRoomsAvailability = await checkAllRoomsAvailability(checkInDate, checkOutDate);
+ const allRoomsAvailability = await checkAllRoomsAvailability(new Date(checkInDate), new Date(checkOutDate));
  console.log('Rooms availability:', allRoomsAvailability);
  return res.status(201).json(allRoomsAvailability)
 });
