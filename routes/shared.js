@@ -33,7 +33,7 @@ const checkAllRoomsAvailability = async (checkInTime, checkOutTime) => {
     }
   };
 
-router.get("/showrooms", async (req, res) => {
+router.post("/showrooms", async (req, res) => {
  let {checkInDate, checkOutDate} = req.body;
  const allRoomsAvailability = await checkAllRoomsAvailability(new Date(checkInDate), new Date(checkOutDate));
  return res.status(201).json(allRoomsAvailability)
