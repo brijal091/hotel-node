@@ -8,7 +8,6 @@ fetchuser = (req,res,next) => {
     // For test we are sending particular token from header to here 
     // You can check thunderclient request secton for this  , we got the token from the json of after login vala sec
     const token = req.header('auth-token');
-    console.log(token);
     if (!token){
         res.status(401).send({error: "You need to Login To view this page"})
     }
